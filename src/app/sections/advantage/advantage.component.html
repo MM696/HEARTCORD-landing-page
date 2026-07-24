@@ -1,0 +1,35 @@
+<section class="advantage section">
+  <div class="container">
+    <h2 class="section-title">The Platform Advantage</h2>
+
+    <div class="advantage__grid">
+      @for (item of items; track item.title) {
+        <article class="adv-card">
+          <div class="adv-card__icon" [attr.data-icon]="item.icon" aria-hidden="true">
+            @switch (item.icon) {
+              @case ('bolt') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" stroke-linejoin="round" />
+                </svg>
+              }
+              @case ('clock') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" stroke-linecap="round" />
+                </svg>
+              }
+              @case ('shield') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 3 5 6v5c0 5 3.5 8.5 7 10 3.5-1.5 7-5 7-10V6l-7-3z" stroke-linejoin="round" />
+                  <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              }
+            }
+          </div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.body }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

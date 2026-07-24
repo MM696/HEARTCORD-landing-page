@@ -1,0 +1,26 @@
+<header class="nav" [class.scrolled]="scrolled()">
+  <div class="container nav__inner">
+    <a href="#top" class="nav__logo" (click)="closeMenu()">HEARTCORD</a>
+
+    <nav class="nav__links" [class.open]="menuOpen()" aria-label="Primary">
+      <a href="#features" (click)="closeMenu()">Features</a>
+      <a href="#how" (click)="closeMenu()">How it works</a>
+      <a href="#pricing" (click)="closeMenu()">Pricing</a>
+      <a href="#faq" (click)="closeMenu()">Resources</a>
+    </nav>
+
+    <a href="#pricing" class="btn btn-ghost nav__cta">Start your free trial</a>
+
+    <button
+      type="button"
+      class="nav__burger"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Toggle menu"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

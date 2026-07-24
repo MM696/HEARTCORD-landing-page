@@ -1,0 +1,28 @@
+.trust {
+  padding-top: 1rem;
+  padding-bottom: 3.5rem;
+
+  &__label {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.875rem;
+    margin-bottom: 1.75rem;
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem 2.75rem;
+  }
+
+  &__logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.28);
+    user-select: none;
+  }
+}

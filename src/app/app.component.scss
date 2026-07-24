@@ -1,0 +1,7 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(90, 70, 200, 0.28), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(40, 100, 220, 0.12), transparent 50%),
+    var(--bg);
+}

@@ -1,0 +1,55 @@
+<section class="pricing section" id="pricing">
+  <div class="container">
+    <h2 class="section-title">Membership Pricing</h2>
+
+    <div class="billing" role="group" aria-label="Billing period">
+      <button
+        type="button"
+        [class.active]="!annual()"
+        (click)="setBilling(false)"
+      >
+        Monthly
+      </button>
+      <button
+        type="button"
+        [class.active]="annual()"
+        (click)="setBilling(true)"
+      >
+        Annually
+      </button>
+    </div>
+
+    <div class="pricing__grid">
+      @for (plan of plans(); track plan.name) {
+        <article class="plan" [class.featured]="plan.featured">
+          <header>
+            <h3>{{ plan.name }}</h3>
+            <div class="plan__price">
+              <span class="amount">{{ plan.price }}</span>
+              <span class="period">{{ plan.period }}</span>
+            </div>
+          </header>
+          <ul>
+            @for (feature of plan.features; track feature) {
+              <li>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.4" opacity="0.35" />
+                  <path d="m6.5 10.2 2.2 2.2 4.8-4.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                {{ feature }}
+              </li>
+            }
+          </ul>
+          <a
+            href="#top"
+            class="btn"
+            [class.btn-primary]="plan.featured"
+            [class.btn-outline]="!plan.featured"
+          >
+            Get Started Free
+          </a>
+        </article>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,146 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 4rem 0 2rem;
+  background: rgba(0, 0, 0, 0.25);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  &__logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 0.85rem;
+  }
+
+  &__brand p,
+  &__download p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    line-height: 1.55;
+    max-width: 280px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+
+    a {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      display: grid;
+      place-items: center;
+      color: var(--text-muted);
+      transition: color 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        color: var(--text);
+        border-color: var(--border-strong);
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 650;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  li a {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+
+  &__download p {
+    margin-bottom: 1rem;
+  }
+
+  &__bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+
+    p {
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.store-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-strong);
+  background: rgba(255, 255, 255, 0.04);
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+    font-weight: 650;
+    line-height: 1.2;
+
+    small {
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--text-dim);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
