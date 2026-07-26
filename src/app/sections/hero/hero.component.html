@@ -1,5 +1,18 @@
 <section class="hero" id="top">
+  <div class="hero__media" aria-hidden="true">
+    <img
+      src="/images/globe-connect.jpg"
+      alt=""
+      class="hero__img"
+      width="1920"
+      height="1080"
+    />
+    <div class="hero__veil"></div>
+    <div class="hero__pulse"></div>
+  </div>
+
   <div class="container hero__content">
+    <p class="hero__brand">HEARTCORD</p>
     <h1 class="hero__title">
       Developing Intuitive Digital<br />
       Experiences That feel.
@@ -11,68 +24,6 @@
     <div class="hero__actions">
       <a href="#pricing" class="btn btn-primary">Why create account?</a>
       <a href="#faq" class="btn btn-ghost">Connect with Support</a>
-    </div>
-  </div>
-
-  <div class="container hero__mock">
-    <div class="mock" aria-hidden="true">
-      <div class="mock__chrome">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <div class="mock__tabs">
-          <span class="active">workspace.tsx</span>
-          <span>api.routes.ts</span>
-          <span>styles.scss</span>
-        </div>
-      </div>
-      <div class="mock__body">
-        <aside class="mock__sidebar">
-          <div class="mock__nav-item active">Overview</div>
-          <div class="mock__nav-item">Projects</div>
-          <div class="mock__nav-item">Agents</div>
-          <div class="mock__nav-item">Deploy</div>
-          <div class="mock__nav-item">Settings</div>
-          <div class="mock__stat">
-            <span>Latency</span>
-            <strong>42ms</strong>
-          </div>
-          <div class="mock__stat">
-            <span>Uptime</span>
-            <strong>99.99%</strong>
-          </div>
-        </aside>
-        <div class="mock__main">
-          <div class="mock__panel mock__code">
-            <pre><code><span class="kw">const</span> agent = <span class="fn">createAgent</span>(&#123;
-  model: <span class="str">'heartcord-pro'</span>,
-  tools: [<span class="str">'edit'</span>, <span class="str">'terminal'</span>],
-&#125;);
-
-<span class="kw">await</span> agent.<span class="fn">run</span>(&#123;
-  prompt: <span class="str">'Ship the landing page'</span>,
-&#125;);</code></pre>
-          </div>
-          <div class="mock__grid">
-            <div class="mock__panel mock__chart">
-              <div class="mock__label">Deployments</div>
-              <div class="bars">
-                <i style="--h: 42%"></i>
-                <i style="--h: 68%"></i>
-                <i style="--h: 55%"></i>
-                <i style="--h: 88%"></i>
-                <i style="--h: 72%"></i>
-                <i style="--h: 95%"></i>
-              </div>
-            </div>
-            <div class="mock__panel mock__chat">
-              <div class="mock__label">Live session</div>
-              <div class="bubble">Refactor auth middleware…</div>
-              <div class="bubble reply">Done — 3 files updated.</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>

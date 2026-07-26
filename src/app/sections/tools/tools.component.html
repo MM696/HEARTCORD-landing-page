@@ -1,6 +1,22 @@
-<section class="tools section" id="how">
+<section class="tools section" id="how" [class.in-view]="inView()">
   <div class="container">
     <h2 class="section-title">Precision Powered AI Tools</h2>
+    <p class="tools__lead">
+      One connected workspace for payments, support, and deploys —
+      every module talking to the same intelligent core.
+    </p>
+
+    <figure class="tools__showcase">
+      <img
+        src="/images/thedigitalartist.jpg"
+        alt="Connected AI tools and infrastructure network"
+        width="1600"
+        height="900"
+        loading="lazy"
+      />
+      <div class="tools__sheen" aria-hidden="true"></div>
+      <div class="tools__showcase-glow" aria-hidden="true"></div>
+    </figure>
 
     <div class="tools__grid">
       <article class="tool">

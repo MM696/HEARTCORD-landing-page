@@ -1,6 +1,22 @@
-<section class="advantage section">
-  <div class="container">
+<section class="advantage section" [class.in-view]="inView()">
+  <div class="advantage__media" aria-hidden="true">
+    <img
+      src="/images/globe-frequency.jpg"
+      alt=""
+      class="advantage__img"
+      width="1920"
+      height="1080"
+    />
+    <div class="advantage__signal"></div>
+    <div class="advantage__veil"></div>
+  </div>
+
+  <div class="container advantage__inner">
     <h2 class="section-title">The Platform Advantage</h2>
+    <p class="advantage__lead">
+      Built on a global network that keeps every agent, deploy, and review in sync —
+      wherever your team ships from.
+    </p>
 
     <div class="advantage__grid">
       @for (item of items; track item.title) {
